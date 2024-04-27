@@ -18,7 +18,7 @@ public class UserController {
     @Value("${user.minAge}")
     private int minAge = 18;
     private long userIdCounter = 1;
-    private List<User> userList = new ArrayList<>();
+    private final List<User> userList = new ArrayList<>();
 
     @GetMapping
     public ResponseEntity<List<User>> getUsers() {
